@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Interest Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main__div">
+      <h1>Simple Interest Calculator</h1>
+
+      <span>Amount</span> <input type="number" id="principal" />
+      <span>Rate</span>
+      <div class="rate">
+        <input
+          type="range"
+          id="rate"
+          min="1"
+          max="20"
+          value="10.25"
+          step="0.25"
+          onchange="updateRate()"
+        />
+        <p id="rate__value">10.25 %</p>
+      </div>
+      <span>No. of Years</span>
+      <input type="number" id="years" list="all__years" /> <br />
+      <datalist id="all__years">
+        <option value="1" class="value">1</option>
+        <option value="2" class="value">2</option>
+        <option value="3" class="value">3</option>
+        <option value="4" class="value">4</option>
+        <option value="5" class="value">5</option>
+        <option value="6" class="value">6</option>
+        <option value="7" class="value">7</option>
+        <option value="8" class="value">8</option>
+      </datalist>
+      <span>Interest</span> <span id="result"> 0 </span><br />
+
+      <button onclick="compute()">Compute Interest</button>
+    </div>
+    <footer>&#169; This Calculator belongs to Tariq Hussain</footer>
+  </body>
+</html>
